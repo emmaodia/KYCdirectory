@@ -1,10 +1,12 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
-export default function App() {
+export default function App(props) {
   return (
     <View style={styles.container}>
-      <Text>Auth Screen!</Text>
+        <TouchableOpacity onPress={() => props.navigation.navigate('Dashboard')}>
+            <Text>Auth Screen!</Text>
+        </TouchableOpacity>
     </View>
   );
 }

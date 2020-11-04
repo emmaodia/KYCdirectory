@@ -1,10 +1,12 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
-export default function App() {
+const Splash = (props) => {
   return (
     <View style={styles.container}>
-      <Text>Splash Screen!</Text>
+        <TouchableOpacity onPress={() => props.navigation.navigate('Auth')}>
+            <Text>Splash Screen!</Text>
+        </TouchableOpacity>
     </View>
   );
 }
@@ -17,3 +19,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+export default Splash;
